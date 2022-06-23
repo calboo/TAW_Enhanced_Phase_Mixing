@@ -159,7 +159,6 @@ CONTAINS
   END SUBROUTINE lagrangian_step
 
 
-
   !****************************************************************************
   ! The main predictor / corrector step which advances the momentum equation
   !****************************************************************************
@@ -427,7 +426,6 @@ CONTAINS
     END DO
 
   END SUBROUTINE viscous_damping
-
 
 
   !****************************************************************************
