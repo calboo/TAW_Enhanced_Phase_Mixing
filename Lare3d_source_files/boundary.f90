@@ -26,7 +26,6 @@ CONTAINS
   END SUBROUTINE set_boundary_conditions
 
 
-
   !****************************************************************************
   ! Call all of the boundaries needed by the core Lagrangian solver
   !****************************************************************************
@@ -42,7 +41,6 @@ CONTAINS
   END SUBROUTINE boundary_conditions
 
 
-
   !****************************************************************************
   ! Boundary conditions for magnetic field through plane
   !****************************************************************************
@@ -53,6 +51,15 @@ CONTAINS
   REAL(num) ::  r
 
     CALL bfield_mpi
+    
+    ! We have used custom boundary conditions that force the ghost cells
+    ! to vary relative to their initial values by the same amount as
+    ! the mirrored cells within the domain.
+
+    ! At the lower boundary we drive Torsional Alfven Waves
+    ! with a spatial profile dependant on the radius,
+    ! amplitude v0 and frequency omega, the driving is ramped
+    ! up at the start of the simulation over a time t0.
 
    IF (proc_x_min == MPI_PROC_NULL .AND. xbc_min == BC_USER) THEN
       bx(-1,:,:) = bx0(-1,:,:)+(bx(1,:,:)-bx0(1,:,:))
@@ -139,7 +146,6 @@ CONTAINS
   END SUBROUTINE bfield_bcs
 
 
-
   !****************************************************************************
   ! Boundary conditions for specific internal energy
   !****************************************************************************
@@ -147,6 +153,8 @@ CONTAINS
   SUBROUTINE energy_bcs
 
     CALL energy_mpi
+    
+     ! We used fixed boundary conditions for the internal energy.
 
     IF (proc_x_min == MPI_PROC_NULL .AND. xbc_min == BC_USER) THEN
       energy( 0,:,:) = energy0( 0,:,:)
@@ -181,7 +189,6 @@ CONTAINS
   END SUBROUTINE energy_bcs
 
 
-
   !****************************************************************************
   ! Boundary conditions for density
   !****************************************************************************
@@ -189,6 +196,8 @@ CONTAINS
    SUBROUTINE density_bcs
 
     CALL density_mpi
+    
+    ! We used fixed boundary conditions for the density.
 
     IF (proc_x_min == MPI_PROC_NULL .AND. xbc_min == BC_USER) THEN
       rho( 0,:,:) = rho0( 0,:,:)
@@ -264,7 +273,6 @@ CONTAINS
   END SUBROUTINE temperature_bcs
 
 
-
   !****************************************************************************
   ! Full timestep velocity boundary conditions
   !****************************************************************************
@@ -275,6 +283,13 @@ CONTAINS
     REAL(num) ::  r
 
     CALL velocity_mpi
+    
+    ! We apply static boundary conditions for the velocity.
+    
+    ! At the lower boundary we drive Torsional Alfven Waves
+    ! with a spatial profile dependant on the radius,
+    ! amplitude v0 and frequency omega, the driving is ramped
+    ! up at the start of the simulation over a time t0.
 
     IF (proc_x_min == MPI_PROC_NULL .AND. xbc_min == BC_USER) THEN
       vx(-2:0,:,:) = 0.0_num
@@ -343,7 +358,6 @@ CONTAINS
   END SUBROUTINE velocity_bcs
 
 
-
   !****************************************************************************
   ! Half timestep velocity boundary conditions
   !****************************************************************************
@@ -354,6 +368,13 @@ CONTAINS
     REAL(num) ::  r
 
     CALL remap_v_mpi
+    
+    ! We apply static boundary conditions for the half timestep velocity.
+    
+    ! At the lower boundary we drive Torsional Alfven Waves
+    ! with a spatial profile dependant on the radius,
+    ! amplitude v0 and frequency omega, the driving is ramped
+    ! up at the start of the simulation over a time t0.
 
     IF (proc_x_min == MPI_PROC_NULL .AND. xbc_min == BC_USER) THEN
       vx1(-2:0,:,:) = 0.0_num
@@ -420,7 +441,6 @@ CONTAINS
   END SUBROUTINE remap_v_bcs
 
 
-
   !****************************************************************************
   ! Damped boundary conditions
   !****************************************************************************
@@ -430,6 +450,9 @@ CONTAINS
     REAL(num) :: a, d, r, rmax
 
     IF (.NOT.damping) RETURN
+    
+    ! We apply exponential boundary damping above a certain height, d,
+    ! and beyond a certain radius, rmax, within the domain
 
       d = 10.0_num
       DO iz = -1, nz + 1
