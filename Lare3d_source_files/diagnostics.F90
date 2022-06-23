@@ -101,7 +101,6 @@ CONTAINS
   END SUBROUTINE output_routines
 
 
-
   !****************************************************************************
   ! Write SDF file
   !****************************************************************************
@@ -458,7 +457,6 @@ CONTAINS
   END SUBROUTINE write_file
 
 
-
   !****************************************************************************
   ! Test whether any of the conditions for doing output on the current
   ! iteration are met
@@ -496,8 +494,6 @@ CONTAINS
     END IF
 
   END SUBROUTINE io_test
-
-
 
 
   SUBROUTINE energy_account(energy_b, energy_ke, energy_int, do_sum)
@@ -595,7 +591,6 @@ CONTAINS
   END SUBROUTINE energy_account
 
 
-
   SUBROUTINE energy_correction
 
     delta_ke = -delta_ke
@@ -613,7 +608,6 @@ CONTAINS
     CALL energy_bcs
 
   END SUBROUTINE energy_correction
-
 
 
   SUBROUTINE setup_files
@@ -643,7 +637,6 @@ CONTAINS
     WRITE(en_unit) varnames
 
   END SUBROUTINE setup_files
-
 
 
   SUBROUTINE output_log
