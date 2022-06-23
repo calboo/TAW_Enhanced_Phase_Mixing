@@ -308,6 +308,8 @@ CONTAINS
     ALLOCATE(xb_global(-2:nx_global+2))
     ALLOCATE(yb_global(-2:ny_global+2))
     ALLOCATE(zb_global(-2:nz_global+2))
+    
+    ! Additional array allocation for envelope arrays and visc3 array
 
     ALLOCATE(max_vx (-2:nx+2, -2:ny+2, -2:nz+2))
     ALLOCATE(max_bx (-2:nx+2, -1:ny+2, -1:nz+2))
