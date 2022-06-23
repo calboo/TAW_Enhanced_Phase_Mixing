@@ -47,8 +47,6 @@ CONTAINS
 
   END SUBROUTINE user_normalisation
 
-
-
   !****************************************************************************
   ! General control variables. Commented in detail
   !****************************************************************************
@@ -135,7 +133,7 @@ CONTAINS
     !              setup new initial conditions
     ! IC_RESTART - Load the output file with index restart_snapshot and use it
     !              as the initial conditions
-    initial = IC_RESTART
+    initial = IC_NEW
     restart_snapshot = 3
 
     ! If cowling_resistivity is true then the code calculates and
@@ -183,7 +181,6 @@ CONTAINS
     neutral_gas = .TRUE.
 
   END SUBROUTINE control_variables
-
 
 
   !****************************************************************************
