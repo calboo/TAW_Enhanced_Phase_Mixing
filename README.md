@@ -26,21 +26,7 @@ The folder Lare3d_source_files contains seven source files to be used within Lar
 
 To utilise these files in Lare3d the first four should replace files of the same name in the *src* directory and the final three should replace files of the same name in the *core* subdirectory which is found within the *src* directory. Information on how to run Lare3d is given in the Lare3d manual which can be accessed from the webpage https://warwick.ac.uk/fac/sci/physics/research/cfsa/people/tda/larexd/.
 
-### Source file modifications
-
-Modifications to the Lare3d source files provided here are as follows:
-
-| Script | Modification |
-| --- | --- |
-| **control.f90** | The blah blah blah blah blah |
-| **initial_conditions.f90** | The blah blah blah blah blah |
-| **boundary.f90** | The blah blah blah blah blah |
-| **diagnostics.F90** | The blah blah blah blah blah |
-| **shared_data.F90** | The blah blah blah blah blah |
-| **lagran.F90** | The blah blah blah blah blah |
-| **mpi_routines.F90** | The blah blah blah blah blah |
-
-### Simulation Inputs
+## Simulation Inputs
 
 ## Visualisation scripts
 
