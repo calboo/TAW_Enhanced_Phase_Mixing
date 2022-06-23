@@ -12,4 +12,17 @@ This paper compares the nonlinear Lare3d simulation outputs to the outputs from 
 
 This repository contains all the files needed to reproduce the simulations described and the figures shown in this paper. 
 
+## Simulation files
+
+The folder Lare3d_source_files contains seven source files to be used within Lare3d:
+
+- control.f90
+- initial_conditions.f90
+- boundary.f90
+- diagnostics.F90
+- shared_data.F90
+- lagran.F90
+- mpi_routines.F90
+
+To utilise these files in Lare3d the first four should replace files of the same name in the *src* directory and the final three should replace files of the same name in the *core* subdirectory which is found within the *src* directory. Information on how to run Lare3d is given in the Lare3d manual which can be accessed from the webpage https://warwick.ac.uk/fac/sci/physics/research/cfsa/people/tda/larexd/.
 
