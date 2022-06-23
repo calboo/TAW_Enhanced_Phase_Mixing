@@ -61,7 +61,6 @@ MODULE constants
 END MODULE constants
 
 
-
 MODULE shared_data
 
   USE constants
@@ -130,7 +129,7 @@ MODULE shared_data
   LOGICAL :: resistive_mhd, any_open, rke
   LOGICAL :: restart
 
-  ! Added for Ruderman work
+  ! Parameters for TAW Enhanced Phase Mixing
 
   REAL(num), PARAMETER :: H = 5.0_num
   REAL(num), PARAMETER :: b0 = 1.0_num
@@ -228,7 +227,6 @@ MODULE shared_data
   INTEGER, PARAMETER :: en_unit = 30
 
 END MODULE shared_data
-
 
 
 ! The pre-processor removes the following line so it compiles without error
