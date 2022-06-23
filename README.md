@@ -26,7 +26,9 @@ The folder Lare3d_source_files contains seven source files to be used within Lar
 
 To utilise these files in Lare3d the first four should replace files of the same name in the *src* directory and the final three should replace files of the same name in the *core* subdirectory which is found within the *src* directory. Information on how to run Lare3d is given in the Lare3d manual which can be accessed from the webpage https://warwick.ac.uk/fac/sci/physics/research/cfsa/people/tda/larexd/.
 
-## Simulation Inputs
+## Simulation Parameters
+
+The simulation parameters can be changed in three places. In *control.f90* the normalisation constant $L_0$, $B_0$ and $\rho_0$
 
 ## Visualisation scripts
 
