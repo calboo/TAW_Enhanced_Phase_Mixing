@@ -9,7 +9,7 @@ pro flowrate_mag
 
 ; Produces a graph showing the total mass flow rate across
 ; magnetic surfaces against the height at which these magnetic
-; surfaces intersect the vertic axis
+; surfaces intersect the vertical axis.
 
 ; The Lare3d output used is specified when running velsavs.pro,
 ; which produces sav files for the grid coordinates, cylindrical
