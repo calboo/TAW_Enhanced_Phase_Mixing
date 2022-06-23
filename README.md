@@ -52,3 +52,10 @@ In **shared_data.f90** the user can set the majority of the simulation parmaeter
 
 ## Visualisation scripts
 
+The IDL visulasation scripts that used TAWAS outputs to generate figures for the paper, *Enhanced phase mixing of torsional Alfvén waves in stratified and divergent solar coronal structures – II. Non-linear simulations*, can be found in under Visualisation_scripts. The purpose of each script is as follows:
+
+| Script | Description |
+| --- | --- |
+| velsavs.pro | Used to produce sav files from a specified Lare3d output that can be utilised by other visulaisation scripts. The sav files produced are for the numerical grids, the azimuthal, radial and vertical velocities and the density over a vertical midplane of the simulation output. |
+| vplot_lare.pro | Produces a graph of the azimuthal velocity against the radius, r, and height, z, for a Lare3d output using sav files generated with velsavs.pro, used to produce Figure 4 in the paper.|
+
