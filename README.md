@@ -1,4 +1,4 @@
-# TAW_Enhanced_Phase_Mixing
+# TAW Enhanced Phase Mixing
 
 To simulate the propagation and enhanced phase mixing of Torsional Alfv&egrave;n Waves (TAWs) the MHD simulation code Lare3d was used. The Lare3d code, manual and IDL visualisation scripts can be found here:  https://warwick.ac.uk/fac/sci/physics/research/cfsa/people/tda/larexd/.
 
