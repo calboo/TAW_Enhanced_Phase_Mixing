@@ -28,7 +28,7 @@ To utilise these files in Lare3d the first four should replace files of the same
 
 ## Simulation Parameters
 
-The simulation parameters can be changed in three places. In *control.f90* the normalisation constant $L_0$, $B_0$ and $\rho_0$
+The simulation parameters can be changed in three places. In *control.f90* the normalisation constant $L_0$, $B_0$ 
 
 ## Visualisation scripts
 
