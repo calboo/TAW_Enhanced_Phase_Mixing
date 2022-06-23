@@ -42,26 +42,13 @@ In **shared_data.f90** the user can set the majority of the simulation parmaeter
 | --- | --- |
 | H | The magnetic scale height |
 | b0 | The strength of the background magnetic field |
-| rho_alpha | The ratio of magnetic and density scale heights, rho_alpha = H/H_rho, used to set H_rho = H/rho_alpha|
-| H | |
-| H | |
-| H | |
-| H | |
-| H | |
-| H | |
-
-
-
-  REAL(num), PARAMETER :: H = 5.0_num
-  REAL(num), PARAMETER :: b0 = 1.0_num
-  REAL(num), PARAMETER :: rho_alpha = 1.0_num
-  REAL(num), PARAMETER :: zeta = 5.0_num
-  REAL(num), PARAMETER :: period = 60.0_num/14.4865_num
-  REAL(num), PARAMETER :: omega = 2.0*pi/period
-  REAL(num), PARAMETER :: v0 = 1.0_num/692.3744_num !1 kms-1
-  REAL(num), PARAMETER :: r0 = 0.5_num  !5 Mm
-  REAL(num), PARAMETER :: t0 = 10.0
-
+| rho_alpha | The ratio of magnetic and density scale heights, rho_alpha = H/H_rho|
+| zeta | The density contrast of the central high density flux tube |
+| period | The wave period of the TAW driving |
+| omega | The frequency of TAW driving |
+| v0 | The amplitude of TAW driving, in normalised velocity units |
+| r0 | The radius of the central high density flux tube|
+| t0 | The rampup time of TAW driving|
 
 ## Visualisation scripts
 
