@@ -60,8 +60,5 @@ The IDL visulasation scripts that used TAWAS outputs to generate figures for the
 | vplot_lare.pro | Produces a graph of the azimuthal velocity against the radius, r, and height, z, for a Lare3d output using sav files generated with velsavs.pro, used to produce Figure 4.|
 | velplots.pro |Produces a panel plot showing the azimuthal, radial and vertical plasma velocities across the vertical midplane of a Lare3d simulation output using sav files generated with velsavs.pro, used to produce Figure 5 and 6.|
 | loggraph.pro |Produces a graph showing the dependence of the maximum amplitudes in radial and vertical velocities on the amplitude of the driving amplitude. Uses sav files produced with velsavs.pro from multiple Lare3d simulations. Used to produce Figure 7.|
-
-| .pro ||
-| .pro ||
-
-
+| rho_graphs.pro |Produces four images, two shaded surface plots showing the initial and final density profiles across the vertical midplane of a Lare3d simulation, and two images showing coloured contours of the  the initial and final density profiles across the vertical midplane of a Lare3d simulation. Used to produce Figures 8 and 9.|
+| flowrate_mag.pro |Produces a graph showing the total mass flow rate across magnetic surfaces against the height at which these magnetic surfaces intersect the vertical axis, uses sav files generated with velsavs.pro, used to produce Figures 10 and 11.|
