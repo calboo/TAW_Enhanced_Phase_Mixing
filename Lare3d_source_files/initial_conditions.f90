@@ -115,6 +115,7 @@ CONTAINS
   max_bx = 0.0_num
 
 ! set background, non-shock, viscosity
+! NB normalisation constant for visc3 = v_0 * L_0
 
     visc3 = 7.22e-6_num
 
