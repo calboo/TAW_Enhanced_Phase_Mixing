@@ -30,13 +30,15 @@ To utilise these files in Lare3d the first four should replace files of the same
 
 Modifications to the Lare3d source files provided here are as follows:
 
-**control.f90** - The blah blah blah blah blah.
-**initial_conditions.f90** - The blah blah blah blah blah.
-**boundary.f90** - The blah blah blah blah blah.
-**diagnostics.F90** - The blah blah blah blah blah.
-**shared_data.F90** - The blah blah blah blah blah.
-**lagran.F90** - The blah blah blah blah blah.
-**mpi_routines.F90** - The blah blah blah blah blah.
+| Script | Modification |
+| --- | --- |
+| **control.f90** | The blah blah blah blah blah |
+| **initial_conditions.f90** | The blah blah blah blah blah |
+| **boundary.f90** | The blah blah blah blah blah |
+| **diagnostics.F90** | The blah blah blah blah blah |
+| **shared_data.F90** | The blah blah blah blah blah |
+| **lagran.F90** | The blah blah blah blah blah |
+| **mpi_routines.F90** | The blah blah blah blah blah |
 
 ### Simulation Inputs
 
